@@ -1,0 +1,570 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Review Page Specific Styles */
+.review-body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.review-body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-body .nav {
+  display: flex;
+}
+
+.review-body h1.page-title {
+  text-align: left;
+  margin: 20px 15px;
+  font-size: 2rem;
+}
+
+.review-body .container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+}
+
+.review-body .left-panel,
+.review-body .right-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+.review-body .left-panel {
+  border-right: 1px solid #ccc;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card .title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.rating span {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #ccc;
+  transition: color 0.3s;
+  user-select: none;
+  margin-right: 4px;
+}
+
+.rating span.selected {
+  color: #f39c12;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 70px;
+  margin-bottom: 10px;
+}
+
+button.btn-primary {
+  align-self: flex-end;
+  padding: 6px 16px;
+}
+
+.review-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.review-card .rating {
+  font-size: 1.2rem;
+  color: #f39c12;
+  margin-bottom: 6px;
+}
+
+/* Review page mobile styles */
+@media (max-width: 768px) {
+  .review-body header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .review-body .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .review-body .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .review-body .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .review-body .menu-open .nav {
+    display: flex;
+  }
+  
+  .review-body h1.page-title {
+    text-align: center;
+  }
+  
+  .review-body .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .review-body .left-panel,
+  .review-body .right-panel {
+    border: none;
+    padding: 10px;
+  }
+  
+  .movie-card {
+    max-width: 100%;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+  }
+}
+
+/* Home page specific body */
+.home-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Film overview page specific body */
+.film-overview-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  margin: 20px 15px;
+  text-align: center;
+}
+
+/* Hero Section (Home page) */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+  color: white;
+}
+
+/* Content Section (Home page) */
+.content-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Search Container (Film overview page) */
+.search-container {
+  width: 50%;
+  margin: 0 auto 30px;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Film Container (Film overview page) */
+.film-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.film {
+  background-color: #fff;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.film:hover {
+  transform: scale(1.03);
+}
+
+.film img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.film p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Lightbox Styles (Film overview page) */
+#lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#lightboxContent {
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  color: white;
+}
+
+#lightboxContent img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#lightboxCaption {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* Container (Review page) */
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2, .right-panel h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contact Cards (Locations page) */
+.contact-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-card h5 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Review Summary */
+.review-summary {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 40px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet format: 2 columns */
+@media (max-width: 1024px) {
+  .film-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-container {
+    width: 70%;
+  }
+  
+  .container {
+    flex-direction: column;
+  }
+  
+  .hero {
+    margin: 10px;
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile format: 1 column */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  nav.nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-open .nav {
+    display: flex;
+  }
+
+  .page-title {
+    margin-top: 20px;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .film-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  
+  .hero {
+    margin: 10px;
+    padding: 25px 15px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .content-section {
+    padding: 20px 15px;
+  }
+  
+  .contact-card {
+    min-width: auto;
+    margin: 10px 0;
+  }
+  
+  #locations {
+    flex-direction: column;
+  }
+}
+
+/* Small mobile format: adjustments for very small screens */
+@media (max-width: 480px) {
+  .film {
+    padding: 0;
+  }
+  
+  .film img {
+    height: 300px;
+  }
+  
+  .page-title {
+    font-size: 1.6rem;
+  }
+  
+  .hero {
+    padding: 20px 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

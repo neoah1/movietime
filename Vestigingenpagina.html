@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Tekenset en scherminstellingen voor mobielvriendelijkheid -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titel van de pagina -->
+    <title>Vestigingen - MovieTime</title>
+
+    <!-- Bootstrap CSS voor layout en stijl -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Eigen stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- Header met logo en navigatie -->
+    <header>
+        <div class="logo">
+            <!-- Logo-afbeelding -->
+            <img src="styles/8014040.png" alt="MovieTime Logo">
+        </div>
+
+        <!-- Mobiele menuknop -->
+        <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+
+        <!-- Navigatielinks naar andere pagina's -->
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Vestigingenpagina.html" class="nav-link">Vestigingen</a>
+            <a href="Recensiepagina.html" class="nav-link">Recensies</a>
+            <a href="filmoverzichtpagina.html" class="nav-link">Film overzicht</a>
+        </nav>
+    </header>
+
+    <!-- Titel van de pagina -->
+    <h1 class="page-title">Vestigingen</h1>
+    
+    <div class="container">
+        <!-- Zoekveld om vestigingen te filteren -->
+        <input type="text" id="search" class="form-control mb-3" placeholder="Zoek vestiging..." onkeyup="filterLocations()">
+        
+        <!-- Overzicht van alle vestigingen -->
+        <div class="row" id="locations">
+
+            <!-- Informatie over vestiging Amsterdam -->
+            <div class="contact-card">
+                <h5>MovieTime Amsterdam</h5>
+                <p>Kalverstraat 1, 1011 AA Amsterdam</p>
+                <p>T: 020 1234123</p>
+                <p>E: amsterdam@movietime.nl</p>
+            </div>
+
+            <!-- Informatie over vestiging Amstelveen -->
+            <div class="contact-card">
+                <h5>MovieTime Amstelveen</h5>
+                <p>Stadsplein 2, 1122 BB Amstelveen</p>
+                <p>T: 020 4321321</p>
+                <p>E: amstelveen@movietime.nl</p>
+            </div>
+
+            <!-- Informatie over vestiging Haarlem -->
+            <div class="contact-card">
+                <h5>MovieTime Haarlem</h5>
+                <p>Zijlstraat 3, 2033 CC Haarlem</p>
+                <p>T: 023 7654321</p>
+                <p>E: haarlem@movietime.nl</p>
+            </div>
+
+            <!-- Informatie over vestiging Utrecht -->
+            <div class="contact-card">
+                <h5>MovieTime Utrecht</h5>
+                <p>Neude 4, 3544 DD Utrecht</p>
+                <p>T: 030 8877665</p>
+                <p>E: utrecht@movietime.nl</p>
+            </div>
+
+            <!-- Informatie over vestiging Groningen -->
+            <div class="contact-card">
+                <h5>MovieTime Groningen</h5>
+                <p>Heerenstraat 5, 3544 DD Groningen</p>
+                <p>T: 050 8877665</p>
+                <p>E: groningen@movietime.nl</p>
+            </div>
+
+            <!-- Informatie over vestiging Maastricht -->
+            <div class="contact-card">
+                <h5>MovieTime Maastricht</h5>
+                <p>Vrijthof 6, 3544 DD Maastricht</p>
+                <p>T: 043 8877665</p>
+                <p>E: maastricht@movietime.nl</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript-bestand voor interacties zoals zoeken -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

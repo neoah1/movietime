@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Dit geeft aan dat het een HTML5-document is -->
+<html lang="nl">
+<head>
+  <!-- Tekenset en mobielvriendelijke instellingen -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Titel van de pagina -->
+  <title>Recensiepagina - MovieTime</title>
+
+  <!-- Bootstrap-stijlen voor opmaak -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+  <!-- Eigen CSS-bestand voor aangepaste stijlen -->
+ <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="review-body">
+
+<!-- Bovenkant van de pagina met logo en navigatie -->
+<header>
+  <div class="logo">
+    <!-- Logo-afbeelding -->
+    <img src="styles/8014040.png" alt="MovieTime Logo">
+  </div>
+
+  <!-- Hamburger-menu knop voor mobiel -->
+  <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+
+  <!-- Navigatiebalk met links naar andere pagina's -->
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="Vestigingenpagina.html" class="nav-link">Vestigingen</a>
+    <a href="Recensiepagina.html" class="nav-link">Recensies</a>
+    <a href="filmoverzichtpagina.html" class="nav-link">Film overzicht</a>
+  </nav>
+</header>
+
+<!-- Hoofdcontainer voor de inhoud van de pagina -->
+<div class="container">
+
+  <!-- Linker paneel: locaties en films -->
+  <div class="left-panel">
+    <!-- Dropdown-menu om vestiging te kiezen -->
+    <h2>Vestigingen</h2>
+    <select id="location-select" class="form-control mb-4" onchange="loadLocation()">
+      <option value="Amsterdam">Amsterdam</option>
+      <option value="Rotterdam">Rotterdam</option>
+      <option value="Utrecht">Utrecht</option>
+      <option value="Den Haag">Den Haag</option>
+      <option value="Eindhoven">Eindhoven</option>
+    </select>
+
+    <!-- Overzicht van beschikbare films -->
+    <h2>Onze films</h2>
+    <div id="movies-container">
+      <!-- Eén filmkaart met poster, titel, beoordeling en recensieveld -->
+      <div class="movie-card" data-title="Film 1 - Amsterdam">
+        <!-- Filmposter -->
+        <img src="styles/poster1.jpg" alt="Poster van Film 1">
+
+        <!-- Titel van de film -->
+        <p class="title font-weight-bold">Film 1 - Amsterdam</p>
+
+        <!-- Beoordeling met sterren (klikbaar) -->
+        <div class="rating" aria-label="Sterren beoordeling voor Film 1">
+          <span onclick="setRating('Film 1 - Amsterdam',1)">★</span>
+          <span onclick="setRating('Film 1 - Amsterdam',2)">★</span>
+          <span onclick="setRating('Film 1 - Amsterdam',3)">★</span>
+          <span onclick="setRating('Film 1 - Amsterdam',4)">★</span>
+          <span onclick="setRating('Film 1 - Amsterdam',5)">★</span>
+        </div>
+
+        <!-- Tekstvak voor het schrijven van een recensie -->
+        <textarea id="review-text-Film 1 - Amsterdam" class="form-control" placeholder="Schrijf je recensie hier..."></textarea>
+
+        <!-- Knop om recensie toe te voegen -->
+        <button class="btn btn-primary" onclick="addReview('Film 3 - Amsterdam')">Recensie toevoegen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rechter paneel: gebruikersrecensies en korting -->
+  <div class="right-panel">
+    <h2>Jouw mening</h2>
+    
+    <!-- Container waar recensies worden getoond -->
+    <div id="reviews-container"></div>
+
+    <!-- Samenvatting van recensies en korting -->
+    <div class="review-summary mt-4">
+      <p id="review-count">Aantal recensies: 0</p>
+      <p id="discount" style="display: none;">Jouw korting: 10%</p>
+      <p id="discount-code" style="display: none;">
+        Kortingscode: <strong id="discount-value"></strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Koppeling naar extern JavaScript-bestand -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

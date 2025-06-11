@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- Tekenset en opmaak voor mobiele schermen -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Titel die bovenaan het tabblad komt te staan -->
+  <title>Filmoverzicht - MovieTime</title>
+
+  <!-- Link naar Bootstrap voor standaard opmaak -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+  <!-- Link naar eigen CSS-bestand -->
+ <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="film-overview-body">
+
+  <!-- Bovenste gedeelte van de pagina met logo en menu -->
+  <header>
+    <div class="logo">
+      <!-- Logo van de website -->
+      <img src="styles/8014040.png" alt="MovieTime Logo">
+    </div>
+
+    <!-- Knop voor menu op kleine schermen -->
+    <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+
+    <!-- Navigatiebalk met links naar andere pagina's -->
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="Vestigingenpagina.html" class="nav-link">Vestigingen</a>
+      <a href="Recensiepagina.html" class="nav-link">Recensies</a>
+      <a href="filmoverzichtpagina.html" class="nav-link">Film overzicht</a>
+    </nav>
+  </header>
+
+  <!-- Titel van de pagina -->
+  <h1 class="page-title">Nu bij MovieTime!</h1>
+
+  <!-- Zoekvak om films te zoeken -->
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Zoek een film...">
+  </div>
+
+  <!-- Hoofddeel met de lijst van films -->
+  <main>
+    <div class="film-container">
+      <!-- Elke film heeft een afbeelding en naam -->
+      <div class="film" data-title="Oldboy" data-img="../styles/poster1.jpg">
+        <img src="styles/poster1.jpg" alt="Oldboy">
+        <p>Oldboy</p>
+      </div>
+      <div class="film" data-title="Se7en" data-img="../styles/poster2.jpg">
+        <img src="styles/poster2.jpg" alt="Se7en">
+        <p>Se7en</p>
+      </div>
+      <div class="film" data-title="Requiem for a dream" data-img="../styles/poster3.jpg">
+        <img src="styles/poster3.jpg" alt="Requiem for a dream">
+        <p>Requiem for a dream</p>
+      </div>
+      <div class="film" data-title="Reservoir dogs" data-img="../styles/poster4.jpg">
+        <img src="styles/poster4.jpg" alt="Reservoir dogs">
+        <p>Reservoir dogs</p>
+      </div>
+      <div class="film" data-title="Scarface" data-img="../styles/poster5.jpg">
+        <img src="styles/poster5.jpg" alt="Scarface">
+        <p>Scarface</p>
+      </div>
+      <div class="film" data-title="The Thing" data-img="../styles/poster6.jpg">
+        <img src="styles/poster6.jpg" alt="The Thing">
+        <p>The Thing</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Groot voorbeeldvenster dat verschijnt als je op een film klikt -->
+  <div id="lightboxOverlay" onclick="closeLightbox()">
+    <div id="lightboxContent" onclick="event.stopPropagation()">
+      <img id="lightboxImage" src="" alt="">
+      <div id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Voettekst onderaan de pagina -->
+  <footer>
+    <p>&copy; 2025 MovieTime. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <!-- Link naar JavaScript-bestand voor interactieve functies -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

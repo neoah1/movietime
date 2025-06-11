@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Tekenset en goede weergave op alle apparaten -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titel van de pagina (bovenaan in het tabblad) -->
+    <title>Home - MovieTime</title>
+    
+    <!-- Link naar Bootstrap-stijlen voor basisopmaak -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Link naar eigen opmaakbestand (CSS) -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="home-body">
+
+    <!-- Bovenste deel van de pagina: logo en navigatie -->
+    <header>
+        <div class="logo">
+            <!-- Logo van MovieTime -->
+            <img src="styles/8014040.png" alt="MovieTime Logo">
+        </div>
+
+        <!-- Knop voor menu op mobiele schermen -->
+        <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+
+        <!-- Navigatiebalk met links naar andere pagina's -->
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Vestigingenpagina.html" class="nav-link">Vestigingen</a>
+            <a href="Recensiepagina.html" class="nav-link">Recensies</a>
+            <a href="filmoverzichtpagina.html" class="nav-link">Film overzicht</a>
+        </nav>
+    </header>
+
+    <!-- Hoofdtitel op de homepage -->
+    <h1 class="page-title">Welkom bij MovieTime</h1>
+
+    <!-- Groot visueel gedeelte met een korte tekst en knop -->
+    <div class="hero">
+        <p>Ervaar de nieuwste films en unieke bioscoopervaringen.</p>
+        <div>
+            <!-- Knop die je naar de vestigingenpagina brengt -->
+            <a href="Vestigingenpagina.html" class="btn">Bekijk Vestigingen</a>
+        </div>
+    </div>
+
+    <!-- Informatiegedeelte over MovieTime -->
+    <div class="content-section">
+        <h2>Over Ons</h2>
+        <p>MovieTime biedt een luxe bioscoopervaring met de nieuwste technologieën en comfortabele zitplaatsen. Kom langs en geniet van onze unieke filmvoorstellingen.</p>
+        <!-- Knop die je naar de recensiepagina brengt -->
+        <a href="Recensiepagina.html" class="btn">Bekijk Recensies</a>
+    </div>
+
+    <!-- Voettekst onderaan de pagina -->
+    <footer>
+        <p>&copy; 2025 MovieTime. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <!-- JavaScript-bestand voor extra functionaliteit -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

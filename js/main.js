@@ -14,7 +14,7 @@ function initializeFilmOverview() {
       
       films.forEach(film => {
         const filmName = film.querySelector('p').textContent.toLowerCase();
-        if (filmName.includes(searchText)) {
+        if (filmName.startsWith(searchText)) {
           film.style.display = 'block';
         } else {
           film.style.display = 'none';
